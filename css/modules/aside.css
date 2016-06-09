@@ -27,14 +27,6 @@
     @desc title {
         margin-bottom: 2.7rem;
     }
-
-    @desc info-part {
-        display: none;
-
-        @modifier active {
-            display: block;
-        }
-    }
 }
 
 @component news-tabs {
@@ -42,15 +34,11 @@
     align-items: center;
 
     @desc tab {
-        margin-left:1rem;
         color: #4a5c68;
         font-size: 1.5rem;
         font-weight: 600;
+        margin: 0 1.7rem;
         border-bottom: 0.1rem dashed #c1c8cd;
-
-        &:first-of-type {
-            margin-left: 0;
-        }
 
         @modifier active {
             padding: 0.8rem 1.7rem;
@@ -102,7 +90,7 @@
     @desc item-comments {
         background: url("../img/comment.png") no-repeat center;
         color: #ffffff;
-        padding: 0.3rem 0.8rem 0.9rem;
+        padding: 0.3rem 1rem 0.9rem;
         vertical-align: baseline;
         margin-left: 0.3rem;
     }
@@ -155,7 +143,7 @@
     @desc item-comments {
         background: url("../img/comment.png") no-repeat center;
         color: #ffffff;
-        padding: 0.3rem 0.8rem 0.9rem;
+        padding: 0.3rem 1rem 0.9rem;
         vertical-align: baseline;
         margin-left: 0.3rem;
     }

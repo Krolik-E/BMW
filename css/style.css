@@ -688,16 +688,6 @@ a
     margin-bottom: 2.7rem;
 }
 
-.mn-tab__info-part
-{
-    display: none;
-}
-
-.mn-tab__info-part_active
-{
-    display: block;
-}
-
 .mn-news-tabs
 {
     display: -ms-flexbox;
@@ -713,15 +703,10 @@ a
     font-size: 1.5rem;
     font-weight: 600;
 
-    margin-left: 1rem;
+    margin: 0 1.7rem;
 
     color: #4a5c68;
     border-bottom: .1rem dashed #c1c8cd;
-}
-
-.mn-news-tabs__tab:first-of-type
-{
-    margin-left: 0;
 }
 
 .mn-news-tabs__tab_active
@@ -786,7 +771,7 @@ a
 .mn-top-news__item-comments
 {
     margin-left: .3rem;
-    padding: .3rem .8rem .9rem;
+    padding: .3rem 1rem .9rem;
 
     vertical-align: baseline;
 
@@ -857,7 +842,7 @@ a
 .mn-comments__item-comments
 {
     margin-left: .3rem;
-    padding: .3rem .8rem .9rem;
+    padding: .3rem 1rem .9rem;
 
     vertical-align: baseline;
 

@@ -5,9 +5,11 @@
     <title>MINI Roadster</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800,700' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet">
+    <!---Angular--->
+    <script src="node_modules/angular/angular.min.js"></script>
 </head>
 <body>
-    <div class="mn-page">
+    <div class="mn-page" ng-app="myApp">
         <header class="mn-page__header">
             <div class="mn-header">
                 <div class="mn-header__logo">
@@ -190,17 +192,21 @@
                 <div class="mn-aside__advertise">
                     <a class="mn-advertise" href="#"><img class="mn-advertise__img" src="img/banner.png"></a>
                 </div>
-                <div class="mn-aside__top-news">
+                <div class="mn-aside__top-news" ng-controller="tabsController as tabsCtrl">
                     <div class="mn-tab">
                         <div class="mn-tab__title">
                             <ul class="mn-news-tabs">
-                                <li class="mn-news-tabs__tab mn-news-tabs__tab_active"><a href="#" data-tab="top-news" class="mn-news-tabs__tab-link">Читают</a></li>
-                                <li class="mn-news-tabs__tab"><a href="#" data-tab="comments" class="mn-news-tabs__tab-link">Комментируют</a></li>
+                                <li class="mn-news-tabs__tab" ng-click="activeTab='news'" ng-class="{'mn-news-tabs__tab_active': activeTab=='news'}">
+                                    <a href="#" data-tab="top-news" class="mn-news-tabs__tab-link" onclick="return false">Читают</a>
+                                </li>
+                                <li class="mn-news-tabs__tab" ng-click="activeTab='comments'" ng-class="{'mn-news-tabs__tab_active': activeTab=='comments'}">
+                                    <a href="#" data-tab="comments" class="mn-news-tabs__tab-link" onclick="return false">Комментируют</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="mn-tab__info">
-                            <div class="mn-tab__info-part mn-tab__info-part_active">
-                                <ul class="mn-top-news" data-tab-show="top-news">
+                            <div class="mn-tab__info-part">
+                                <ul class="mn-top-news" data-tab-show="top-news" ng-show="activeTab=='news'">
                                     <li class="mn-top-news__item">
                                         <a href="#" class="mn-top-news__item-link">Кроссовер Mazda CX-5 будут  собирать в России</a>
                                         <a href="#" class="mn-top-news__item-comments">10</a>
@@ -221,7 +227,7 @@
                                 </ul>
                             </div>
                             <div class="mn-tab__info-part">
-                                <ul class="mn-comments" data-tab-show="comments">
+                                <ul class="mn-comments" data-tab-show="comments" ng-show="activeTab=='comments'">
                                     <li class="mn-comments__item">
                                         <a href="#" class="mn-comments__item-link">Кроссовер Mazda CX-5 будут  собирать в России</a>
                                         <a href="#" class="mn-comments__item-comments">10</a>
@@ -365,5 +371,12 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        .controller('tabsController', function($scope) {
+            $scope.activeTab = 'news';
+        });
+    </script>
 </body>
 </html>
