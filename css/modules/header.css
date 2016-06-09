@@ -1,0 +1,175 @@
+*,
+*:after,
+*:before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Open Sans", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+@component page {
+    background-color: #f4f7f9;
+
+    @desc header {
+        width: 98rem;
+        margin: 0 auto;
+        padding-left: 1rem;
+    }
+
+    @desc content {
+        width: 96rem;
+        margin: 0 auto;
+        margin-top: 7rem;
+        display: flex;
+    }
+
+    @desc footer {
+        width: 96rem;
+        margin: 0 auto;
+        padding: 9.6rem 0 7.5rem;
+    }
+}
+
+@component header {
+    position: relative;
+    z-index: 1;
+
+    @desc logo {
+        position: absolute;
+        top: 1.4rem;
+        z-index: 2;
+    }
+}
+
+@component logo {
+
+    @desc img {
+        position: relative;
+        padding:3rem;
+        display: block;
+        background: url('../img/logo.png') no-repeat center;
+    }
+}
+
+@component header-banner {
+    position: relative;
+
+    @desc mask {
+        height: 28.5rem;
+        clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    @desc text {
+        position: absolute;
+        right: 4.4rem;
+        top: 46%;
+        background-color: rgba(0, 0, 0,.34) ;
+        clip-path: polygon(7.5% 0, 0 100%, 92.5% 100%, 100% 0);
+        max-width: 49rem;
+        padding: 0.7rem 5rem;
+    }
+
+    @desc h1 {
+        color: #ffffff;
+        text-shadow: 0 2px 0 rgba(0, 0, 0, 0.61);
+        font-size: 4.3rem;
+        font-weight: 700;
+        line-height: 4.5rem;
+    }
+}
+
+@component header-nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    position: relative;
+
+    @desc user {
+        padding-top: 2rem;
+        text-align: center
+    }
+
+    @desc nav {
+        padding-top: 1.8rem;
+        margin-right: 13rem;
+
+        &:after {
+            content: '\0020';
+            position: absolute;
+            top: -22.5rem;
+            z-index: 0;
+            right: -2rem;
+            background-color: #fff;
+            height: 28.5rem;
+            width: 80rem;
+             clip-path: polygon(12% 0, 0 100%, 88% 100%, 100% 0);
+        }
+    }
+}
+
+@component action-link {
+    color: #4a5c68;
+    border-bottom: 0.1rem dotted rgba(0, 0, 0, .3);
+    font-size: 1.3rem;
+}
+
+@component text-muted {
+    color: #acb5bb;
+    font-size: 1.3rem;
+}
+
+@component nav {
+    display: flex;
+    position: relative;
+
+    @desc item {
+        color: #4a5c68;
+        font-size: 1.9rem;
+        line-height: 2.5rem;
+        margin-right: 4.3rem;
+        z-index: 2;
+        padding-bottom: 1.2rem;
+
+        @modifier active {
+            border-bottom: 0.3rem solid #7fd0ff;
+            color: #000000;
+
+            .mn-nav__item-link {
+                &:hover {
+                    color: #000000;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    @desc item-link {
+
+        &:hover {
+            color: #ea0b0b;
+            border-bottom: 0.1rem solid #ea0b0b;
+        }
+    }
+}

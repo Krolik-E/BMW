@@ -1,0 +1,107 @@
+@component article {
+
+    @desc content {
+        width: 70rem;
+        background-color: #fff;
+        padding: 2.5rem 3rem 0;
+        box-shadow: 0 7px 12px rgba(80, 103, 119, 0.28);
+    }
+
+    @desc header {
+        color: #1e6edb;
+        font-size: 2.8rem;
+        font-weight: 600;
+        border-bottom: 0.1rem solid #8eb6ed;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    @desc car-descr {
+        position: relative;
+        margin-bottom: 5rem;
+    }
+
+    @desc car-info {
+        max-width: 37.5rem;
+        margin-top: 5.5rem;
+    }
+
+    @desc car-cart {
+        border: 0.3rem solid #d1e6e9;
+        padding: 1rem 2.1rem 1.2rem 1rem;
+        position: absolute;
+        top: -2rem;
+        right: 0;
+    }
+}
+
+@component article-info {
+    color: #ababab;
+    font-family: Verdana;
+    font-size: 1.1rem;
+    margin-bottom: 4.2rem;
+
+    @desc author {
+        border-bottom: 0.1rem solid rgba(0, 0, 0, .5);
+    }
+}
+
+@component text-general {
+    color: #4f4f4f;
+    font-family: Verdana;
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+    margin-bottom: 2rem;
+}
+
+@component quote {
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+    font-family: Verdana;
+    margin: 4.3rem 0 4.5rem 5rem;
+    display: block;
+    border-left: 0.3rem solid #d1e6e9;
+    padding-left: 3.8rem;
+    padding-right: 12rem;
+    transform: skewX(-19deg);
+    position: relative;
+
+    &:before {
+         content: "\02ee";
+         position: absolute;
+         font-family: Verdana;
+         top: 1.5rem;
+         left: -6rem;
+         color: #d1e6e9;
+         font-size: 8rem;
+         font-style: normal;
+     }
+}
+
+@component article-table {
+    border-top: 0.2rem solid #000000;
+    width: 100%;
+    font-size: 1.3rem;
+    color: #4f4f4f;
+
+    @desc cell {
+        padding: 1.1rem 0 1rem 1.5rem;
+        line-height: 1;
+        border-bottom: 0.1rem solid #e8edf0;
+    }
+
+    @desc row {
+        &:last-of-type > .mn-article-table__cell {
+            border-bottom: none;
+        }
+    }
+}
+
+@component list-bull {
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 1.1rem;
+    color: #000000;
+    line-height: 2.3rem;
+    font-family: Verdana;
+}

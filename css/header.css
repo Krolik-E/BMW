@@ -1,0 +1,79 @@
+*,
+*:after,
+*:before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+}
+
+ul
+{
+    list-style: none;
+}
+
+button
+{
+    cursor: pointer;
+
+    border: none;
+    background: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.mn-page
+{
+    background-color: #f4f7f9;
+}
+
+.mn-page__header
+{
+    width: 96rem;
+    margin: 0 auto;
+}
+
+.mn-header
+{
+    position: relative;
+}
+
+.mn-header__logo
+{
+    position: absolute;
+    top: 1.4rem;
+    left: .8rem;
+}
+
+
+
+.mn-logo__img
+{
+    display: block;
+
+    padding: 3rem;
+
+    background: url('../img/logo.png') no-repeat center;
+}
+
+@header-banner
+{
+    @desc mask
+    {
+        overflow: hidden;
+
+        width: 89rem;
+        height: 28.5rem;
+
+        transform: skewX(160deg);
+    }
+}

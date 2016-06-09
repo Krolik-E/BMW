@@ -1,0 +1,94 @@
+@component footer {
+    @desc content {
+        max-width: 70rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 0;
+    }
+
+    @desc copyrights {
+        padding-left: 3rem;
+    }
+}
+
+@component social {
+    display: flex;
+
+    @desc item {
+        margin-left: 1rem;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+    }
+
+    @desc item-link {
+        display: block;
+        padding: 0.8rem;
+        background-repeat: no-repeat;
+
+        @modifier fb{
+            background-image: url("../img/social.png");
+            background-position: 0 center;
+        }
+
+        @modifier tw{
+            background-image: url("../img/social.png");
+            background-position: -26px center;
+        }
+
+        @modifier in{
+            background-image: url("../img/social.png");
+            background-position: -52px center;
+        }
+
+        @modifier go{
+            background-image: url("../img/social.png");
+            background-position: -78px center;
+        }
+
+        @modifier yo{
+            background-image: url("../img/social.png");
+            background-position: -104px center;
+        }
+
+        @modifier rss{
+            background-image: url("../img/social.png");
+            background-position: -130px center;
+        }
+    }
+}
+
+@component designed {
+
+    @desc descr {
+        font-family: Verdana;
+        font-size: 1.1rem;
+        color: #000000;
+        line-height: 1.5rem;
+        padding-left: 9.5rem;
+    }
+
+    @desc author {
+        border-bottom: 0.1rem solid #aaacae;
+        position: relative;
+
+        &:before {
+            content: '\0020';
+            position: absolute;
+            left: -15.7rem;
+            top: 0.3rem;
+            width: 8.7rem;
+            height: 2.2rem;
+            background: url("../img/designer.png") no-repeat center;
+        }
+    }
+
+    @desc date {
+        padding-left: 9.5rem;
+        font-family: Verdana;
+        font-size: 1rem;
+        color: #8b9191;
+    }
+}
