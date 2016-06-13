@@ -34,6 +34,7 @@
         border: 1px solid #303232;
         position: absolute;
         top: 4.4rem;
+        z-index: 2;
 
         @modifier next {
             right: 3.2rem;

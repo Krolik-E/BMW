@@ -425,6 +425,7 @@ a
 .mn-slider__nav-btn
 {
     position: absolute;
+    z-index: 2;
     top: 4.4rem;
 
     opacity: .9;
